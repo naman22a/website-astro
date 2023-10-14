@@ -1,5 +1,5 @@
-node_modules
-public
-assets
-LICENSE
-yarn.lock
+/node_modules
+/public
+/assets
+/LICENSE
+/yarn.lock

@@ -1,0 +1,26 @@
+{
+    "name": "website-astro",
+    "type": "module",
+    "version": "0.0.1",
+    "license": "LGPL-3.0-or-later",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "prettier --write .",
+        "gen:env": "gen-env-types .env.example -o ./typings/env.d.ts && prettier --write ./typings/env.d.ts"
+    },
+    "dependencies": {
+        "astro": "^3.3.0"
+    },
+    "devDependencies": {
+        "gen-env-types": "^1.3.4",
+        "prettier": "^3.0.3"
+    },
+    "author": {
+        "name": "Naman Arora",
+        "url": "https://namanarora.vercel.app"
+    }
+}

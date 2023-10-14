@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import { images } from '../../assets';
+import Links from './Links';
+import Hamburger from './Hamburger';
+import Menu from './Menu';
+---
+
+<header
+    class="flex items-center px-10 md:px-20 fixed h-20 md:h-24 w-full top-0 z-10
+bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-xl shadow bg-ctp-crust"
+>
+    <!-- Logo -->
+    <Image src={images.logo} alt="Naman Arora" class="h-20 w-20 object-cover" />
+
+    <!-- Desktop Links -->
+    <Links client:only />
+
+    <!-- Hamburger Menu -->
+    <Hamburger client:only />
+
+    <!-- Mobile Links -->
+    <Menu client:only />
+</header>

@@ -3,12 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import { sanityClient } from 'sanity:client';
 import type { LandingData } from '../interfaces';
 
+// Components
+import Landing from '../components/Landing/Landing.astro';
+
+// Fetching data from sanity
 const landingData = (
     await sanityClient.fetch("*[_type =='landing']")
 )[0] as LandingData;
-console.log(landingData);
 ---
 
 <Layout>
-    <h1>Naman Arora</h1>
+    <Landing {...landingData} />
 </Layout>

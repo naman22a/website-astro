@@ -1,5 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { sanityClient } from 'sanity:client';
+import type { LandingData } from '../interfaces';
+
+const landingData = (
+    await sanityClient.fetch("*[_type =='landing']")
+)[0] as LandingData;
+console.log(landingData);
 ---
 
 <Layout>
